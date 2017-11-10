@@ -17,4 +17,3 @@ int main() {
     destruirMatriz(invA);
     return EXIT_SUCCESS;
 }
-

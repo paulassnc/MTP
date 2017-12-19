@@ -1,18 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-#define N 256
-int main() {
-    char frase[N];
-    int i;
-    printf("Entre com uma frase:\n");
-    fgets(frase, N, stdin);
-    for(i = 0; frase[i]; i++){
-            frase[i] = toupper(frase[i]);
-
+#define n 256
+int main(){
+    char frase[n];
+    int i=0, cont=0;
+    printf("Digite uma frase:\n");
+    fgets(frase,n,stdin);
+    for (i=0; frase[i]; i++){
+        if(isalpha(frase[i]))
+            cont++;
     }
-    printf("%s", frase);
-
-
+    printf("%d", cont);
 
     return EXIT_SUCCESS;
+}

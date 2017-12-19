@@ -1,38 +1,25 @@
-#include<stdio.h>
 #include<stdlib.h>
+#include<stdio.h>
 #include<ctype.h>
-#include<string.h>
 #define N 256
- int main() {
-    int i;
+int main(){
     char str[N]; char msg[2*N];
-    printf("Entre com uma frase:");
-    fgets(str, N, stdin); str[strlen(str)-1]= '\0';
-    for(i=0; i < N; i++) str[i] = toupper(str[i]);
-    printf("O tamanho da string: %d\n", strlen(str));
+    int i;
+    printf("entre com umas frase :");
+    fgets(str, N, stdin); str[strlen(str)-1 ]= '\0';
+    for(i=0; i<N; i++) str[i]= toupper(str[i]);
+    printf("o tamanho da string e': %d\n", strlen(str));
     if(strncmp(str,"BOM DIA",7)==0)
-        printf("Bom dia pra voce tambem!");
+        printf("bom dia pra voce tbm!");
     else{
         if(strncmp(str,"TCHAU",5)==0)
-        printf("Saindo? Que pena....");
-    else {
-        strcpy(msg, "Voce quis dizer:");
-        strcat(msg,str);
-        strcat(msg, "?");
-        printf("%s\n",msg);
-
-
-
+            printf("saindo ? que pena...");
+        else{
+            strcpy(msg, "voce quis dizer: ");
+            strcat(msg, str);
+            strcat(msg, "?");
+            printf("%s", msg);
+        }
     }
-
-
-
-
-    }
-
-
-
     return EXIT_SUCCESS;
-
-
-    }
+}
